@@ -108,7 +108,7 @@ class Wrapper(QWebView):
 
     def gotoNextOpenChannelOrIM(self, unreads_only=False, backwards=False):
         return self.page().currentFrame().evaluateJavaScript(
-            'TS.client.ui.gotoNextOpenChannelOrIM(%s, %s);' % (
+            'ScudCloud.gotoNextOpenChannelOrIM(%s, %s);' % (
                 str(bool(unreads_only)).lower(),
                 str(bool(backwards)).lower()))
 

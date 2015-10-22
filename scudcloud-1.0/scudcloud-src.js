@@ -69,7 +69,10 @@ var ScudCloud = {
 	},
     isConnected: function(){
         return "undefined" != typeof TS && "undefined" != typeof TS.model && TS.model.ms_connected;
-    }
+    },
+	gotoNextOpenChannelOrIM: function(unreads_only, backwards){
+		return TS.client.ui.gotoNextOpenChannelOrIM(unreads_only, backwards);
+	},
 };
 if("undefined" != typeof TS){
 	document.onpaste = function(e){desktop.pasted(false);};
